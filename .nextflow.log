@@ -1,0 +1,19 @@
+Sep-17 15:06:21.273 [main] DEBUG nextflow.cli.Launcher - $> nextflow kuberun vpeddu/kube_prp_test
+Sep-17 15:06:21.422 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/vpeddu/kube_prp_test/contents/nextflow.config
+Sep-17 15:06:22.753 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/vikas/Downloads/bootcamp/kubetest/kube_prp_test/nextflow.config
+Sep-17 15:06:22.757 [main] DEBUG nextflow.config.ConfigBuilder - User config file: https://github.com/vpeddu/kube_prp_test/nextflow.config
+Sep-17 15:06:22.758 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/vikas/Downloads/bootcamp/kubetest/kube_prp_test/nextflow.config
+Sep-17 15:06:22.758 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: https://github.com/vpeddu/kube_prp_test/nextflow.config
+Sep-17 15:06:22.780 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Sep-17 15:06:23.398 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Sep-17 15:06:27.479 [main] DEBUG nextflow.cli.Launcher - Operation aborted
+nextflow.exception.AbortOperationException: Missing K8s storage volume claim -- The name of a persistence volume claim needs to be provided in the nextflow configuration file
+	at nextflow.k8s.K8sConfig.checkStorageAndPaths(K8sConfig.groovy:209)
+	at nextflow.k8s.K8sConfig$checkStorageAndPaths$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+	at nextflow.k8s.K8sDriverLauncher.run(K8sDriverLauncher.groovy:122)
+	at nextflow.cli.CmdKubeRun.run(CmdKubeRun.groovy:74)
+	at nextflow.cli.Launcher.run(Launcher.groovy:460)
+	at nextflow.cli.Launcher.main(Launcher.groovy:642)
