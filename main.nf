@@ -16,8 +16,8 @@ process Kraken {
         file "unclassified.fastq"
         file "kraken_report.tsv"
 
-    cpus 6
-    memory 12.Gb 
+    cpus 4
+    memory 8.Gb 
 
     script:
     """
