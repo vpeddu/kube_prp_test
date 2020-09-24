@@ -7,7 +7,7 @@ FASTA_ch = Channel
 
 
 process Kraken {  
-    
+    pod secret: prp-s3-credentials/credentials, mountPath: /root/.aws/credentials
     container 'tbattaglia/kraken2'   
     
     publishDir "KrakenOut/"
@@ -41,7 +41,7 @@ process Kraken {
 }
 
 process Minimap2 {  
-    
+    pod secret: prp-s3-credentials/credentials, mountPath: /root/.aws/credentials
     container 'biocontainers/minimap2:v2.15dfsg-1-deb_cv1'   
     
     publishDir "Minimap2Out/"

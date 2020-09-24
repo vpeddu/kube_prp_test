@@ -1,0 +1,7 @@
+Sep-24 13:46:56.410 [main] DEBUG nextflow.cli.Launcher - $> nextflow -C ../../local.config kuberun vpeddu/kube_prp_test -v 'vikas-pod-test1:/tmp' --krakendb 's3://bmebootcamp/vpeddu/minikrakendb/' --fastq 's3://bmebootcamp/vpeddu/TESTX_H7YRLADXX_S1_L001_R1_001.fastq.gz'
+Sep-24 13:46:56.567 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/vpeddu/kube_prp_test/contents/nextflow.config
+Sep-24 13:46:57.282 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/vikas/Downloads/bootcamp/local.config
+Sep-24 13:46:57.311 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Sep-24 13:47:01.094 [main] DEBUG nextflow.k8s.K8sConfig - Kubernetes workDir=/tmp/vikas/work; projectDir=/tmp/projects; volumeClaims=[vikas-pod-test1]
+Sep-24 13:47:01.786 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Created K8s configMap with name: nf-config-e6ae2cf3
+Sep-24 13:47:30.250 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Wait for pod termination name=friendly-carson

@@ -1,0 +1,1 @@
+2020-09-24 14:07:04	4.1s	agitated_brahmagupta	ERR	6bff15fb19ebb855369d633f298c52e70c35a558	6dd895d2-3ca2-45ee-9097-03c09c88675f	nextflow run vpeddu/kube_prp_test --fastq TESTX_H7YRLADXX_S1_L001_R1_001.fastq.gz --krakendb minikraken2_v2_8GB_201904_UPDATE/ -with-docker 'ubuntu:18.04' -latest -resume
