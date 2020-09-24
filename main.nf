@@ -1,6 +1,11 @@
 FASTQ_ch = file("${params.fastq}")
 DATABASE_ch = file("${params.krakendb}")
 
+FASTA_ch = Channel
+            .fromPath("${params.reference_genomes}**.fasta")
+            .map { file -> tuple(file.baseName, file) }
+
+
 process Kraken {  
     
     container 'tbattaglia/kraken2'   
@@ -31,6 +36,32 @@ process Kraken {
     echo "kraken finished. Logging ls"
     ls -latr
 
+
+    """
+}
+
+process Minimap2 {  
+    
+    container 'biocontainers/minimap2:v2.15dfsg-1-deb_cv1'   
+    
+    publishDir "Minimap2Out/"
+
+    input:
+        tuple val(base), file(reference_fasta) from FASTA_ch
+        file fastq from FASTQ_ch
+
+    output: 
+        file "${base}.sam"
+    cpus 2
+    memory 4.Gb 
+
+    script:
+    """
+    #!/bin/bash
+
+    echo "file ${base}"
+
+    minimap2 -t ${task.cpus} -x map-pb -a ${reference_fasta} ${fastq} > ${base}.sam
 
     """
 }
