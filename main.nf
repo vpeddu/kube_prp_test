@@ -19,7 +19,7 @@ process Testing {
     """
     #!/bin/bash
 
-    cat ~/.aws/credentials > credentials.txt
+    cat /root/.aws/credentials > credentials.txt
 
 
     """
