@@ -1,1 +1,4 @@
 work/*
+KrakenOut/* 
+Minimap2Out/*
+*.log.*
