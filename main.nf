@@ -1,18 +1,16 @@
 
 process Testing {  
-    pod secret: "prp-s3-credentials/credentials", mountPath: "/root/.aws/credentials"
+    //pod secret: "prp-s3-credentials/credentials", mountPath: "/root/.aws/credentials"
     container 'tbattaglia/kraken2'   
     
-    publishDir "KrakenOut/"
+    publishDir "s3://bmebootcamp/vpeddu/ahhhhhhhhhhhhhh/"
 
     // input:
     //     file krakendb from DATABASE_ch
     //     file fastq from FASTQ_ch
 
-    // output:
-    //     file "classified.fastq"
-    //     file "unclassified.fastq"
-    //     file "kraken_report.tsv"
+     output:
+         file "credentials.txt"
 
     cpus 2
     memory 7.Gb 
@@ -21,7 +19,7 @@ process Testing {
     """
     #!/bin/bash
 
-    cat ~/.aws/credentials
+    cat ~/.aws/credentials > credentials.txt
 
 
     """
