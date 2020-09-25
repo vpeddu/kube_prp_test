@@ -1,15 +1,10 @@
-Sep-24 18:34:00.444 [main] DEBUG nextflow.cli.Launcher - $> nextflow kuberun vpeddu/kube_prp_test -v 'vikas-ucsc-pvc:/tmp' -latest
-Sep-24 18:34:01.095 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/vikas/.nextflow/assets/vpeddu/kube_prp_test/.git/config; branch: master; remote: origin; url: https://github.com/vpeddu/kube_prp_test.git
-Sep-24 18:34:01.105 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/vikas/.nextflow/assets/vpeddu/kube_prp_test/.git/config; branch: master; remote: origin; url: https://github.com/vpeddu/kube_prp_test.git
-Sep-24 18:34:01.112 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/vikas/Downloads/bootcamp/kubetest/kube_prp_test/nextflow.config
-Sep-24 18:34:01.113 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/vikas/.nextflow/assets/vpeddu/kube_prp_test/nextflow.config
-Sep-24 18:34:01.113 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/vikas/Downloads/bootcamp/kubetest/kube_prp_test/nextflow.config
-Sep-24 18:34:01.113 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/vikas/.nextflow/assets/vpeddu/kube_prp_test/nextflow.config
-Sep-24 18:34:01.120 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Sep-24 18:34:01.190 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Sep-24 18:34:01.715 [main] DEBUG nextflow.k8s.K8sConfig - Kubernetes workDir=/tmp/vikas/work; projectDir=/tmp/projects; volumeClaims=[vikas-ucsc-pvc]
-Sep-24 18:34:02.117 [main] ERROR nextflow.cli.Launcher - @unknown
-nextflow.k8s.client.K8sResponseException: Request GET /api/v1/namespaces/nextflowucsc/persistentvolumeclaims/vikas-ucsc-pvc returned an error code=403
+Sep-24 18:58:57.865 [main] DEBUG nextflow.cli.Launcher - $> nextflow kuberun login -v 'vikas-pod-test1:/tmp'
+Sep-24 18:58:57.982 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/vikas/Downloads/bootcamp/kubetest/kube_prp_test/nextflow.config
+Sep-24 18:58:57.983 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/vikas/Downloads/bootcamp/kubetest/kube_prp_test/nextflow.config
+Sep-24 18:58:58.017 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Sep-24 18:58:59.647 [main] DEBUG nextflow.k8s.K8sConfig - Kubernetes workDir=/tmp/vikas/work; projectDir=/tmp/projects; volumeClaims=[vikas-pod-test1]
+Sep-24 18:59:00.041 [main] ERROR nextflow.cli.Launcher - @unknown
+nextflow.k8s.client.K8sResponseException: Request GET /api/v1/namespaces/nextflowucsc/persistentvolumeclaims/vikas-pod-test1 returned an error code=403
 
   {
       "kind": "Status",
@@ -18,10 +13,10 @@ nextflow.k8s.client.K8sResponseException: Request GET /api/v1/namespaces/nextflo
           
       },
       "status": "Failure",
-      "message": "persistentvolumeclaims \"vikas-ucsc-pvc\" is forbidden: User \"system:serviceaccount:bmebootcamp:default\" cannot get resource \"persistentvolumeclaims\" in API group \"\" in the namespace \"nextflowucsc\"",
+      "message": "persistentvolumeclaims \"vikas-pod-test1\" is forbidden: User \"system:serviceaccount:bmebootcamp:default\" cannot get resource \"persistentvolumeclaims\" in API group \"\" in the namespace \"nextflowucsc\"",
       "reason": "Forbidden",
       "details": {
-          "name": "vikas-ucsc-pvc",
+          "name": "vikas-pod-test1",
           "kind": "persistentvolumeclaims"
       },
       "code": 403
