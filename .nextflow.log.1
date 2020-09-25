@@ -1,14 +1,14 @@
-Sep-24 18:34:00.444 [main] DEBUG nextflow.cli.Launcher - $> nextflow kuberun vpeddu/kube_prp_test -v 'vikas-ucsc-pvc:/tmp' -latest
-Sep-24 18:34:01.095 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/vikas/.nextflow/assets/vpeddu/kube_prp_test/.git/config; branch: master; remote: origin; url: https://github.com/vpeddu/kube_prp_test.git
-Sep-24 18:34:01.105 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/vikas/.nextflow/assets/vpeddu/kube_prp_test/.git/config; branch: master; remote: origin; url: https://github.com/vpeddu/kube_prp_test.git
-Sep-24 18:34:01.112 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/vikas/Downloads/bootcamp/kubetest/kube_prp_test/nextflow.config
-Sep-24 18:34:01.113 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/vikas/.nextflow/assets/vpeddu/kube_prp_test/nextflow.config
-Sep-24 18:34:01.113 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/vikas/Downloads/bootcamp/kubetest/kube_prp_test/nextflow.config
-Sep-24 18:34:01.113 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/vikas/.nextflow/assets/vpeddu/kube_prp_test/nextflow.config
-Sep-24 18:34:01.120 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Sep-24 18:34:01.190 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Sep-24 18:34:01.715 [main] DEBUG nextflow.k8s.K8sConfig - Kubernetes workDir=/tmp/vikas/work; projectDir=/tmp/projects; volumeClaims=[vikas-ucsc-pvc]
-Sep-24 18:34:02.117 [main] ERROR nextflow.cli.Launcher - @unknown
+Sep-24 18:37:01.916 [main] DEBUG nextflow.cli.Launcher - $> nextflow kuberun vpeddu/kube_prp_test -v 'vikas-ucsc-pvc:/tmp' -latest -profile standard
+Sep-24 18:37:02.636 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/vikas/.nextflow/assets/vpeddu/kube_prp_test/.git/config; branch: master; remote: origin; url: https://github.com/vpeddu/kube_prp_test.git
+Sep-24 18:37:02.651 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/vikas/.nextflow/assets/vpeddu/kube_prp_test/.git/config; branch: master; remote: origin; url: https://github.com/vpeddu/kube_prp_test.git
+Sep-24 18:37:02.659 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/vikas/Downloads/bootcamp/kubetest/kube_prp_test/nextflow.config
+Sep-24 18:37:02.660 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/vikas/.nextflow/assets/vpeddu/kube_prp_test/nextflow.config
+Sep-24 18:37:02.660 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/vikas/Downloads/bootcamp/kubetest/kube_prp_test/nextflow.config
+Sep-24 18:37:02.661 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/vikas/.nextflow/assets/vpeddu/kube_prp_test/nextflow.config
+Sep-24 18:37:02.670 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Sep-24 18:37:02.746 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Sep-24 18:37:03.246 [main] DEBUG nextflow.k8s.K8sConfig - Kubernetes workDir=/tmp/vikas/work; projectDir=/tmp/projects; volumeClaims=[vikas-ucsc-pvc]
+Sep-24 18:37:03.632 [main] ERROR nextflow.cli.Launcher - @unknown
 nextflow.k8s.client.K8sResponseException: Request GET /api/v1/namespaces/nextflowucsc/persistentvolumeclaims/vikas-ucsc-pvc returned an error code=403
 
   {
