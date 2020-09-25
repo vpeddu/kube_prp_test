@@ -1,7 +1,12 @@
-Sep-24 13:13:18.329 [main] DEBUG nextflow.cli.Launcher - $> nextflow -C ../../local.config kuberun vpeddu/kube_prp_test -v 'vikas-pod-test1:/tmp' --krakendb 's3://bmebootcamp/vpeddu/minikrakendb/' --fastq 's3://bmebootcamp/vpeddu/TESTX_H7YRLADXX_S1_L001_R1_001.fastq.gz'
-Sep-24 13:13:18.496 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/vpeddu/kube_prp_test/contents/nextflow.config
-Sep-24 13:13:19.667 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/vikas/Downloads/bootcamp/local.config
-Sep-24 13:13:19.685 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Sep-24 13:13:21.470 [main] DEBUG nextflow.k8s.K8sConfig - Kubernetes workDir=/tmp/vikas/work; projectDir=/tmp/projects; volumeClaims=[vikas-pod-test1]
-Sep-24 13:13:22.348 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Created K8s configMap with name: nf-config-eaa3028e
-Sep-24 13:13:50.561 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Wait for pod termination name=magical-shaw
+Sep-24 17:36:49.483 [main] DEBUG nextflow.cli.Launcher - $> nextflow kuberun vpeddu/kube_prp_test -v 'vikas-pod-test1:/tmp' -latest
+Sep-24 17:36:50.244 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/vikas/.nextflow/assets/vpeddu/kube_prp_test/.git/config; branch: master; remote: origin; url: https://github.com/vpeddu/kube_prp_test.git
+Sep-24 17:36:50.256 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/vikas/.nextflow/assets/vpeddu/kube_prp_test/.git/config; branch: master; remote: origin; url: https://github.com/vpeddu/kube_prp_test.git
+Sep-24 17:36:50.263 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/vikas/Downloads/bootcamp/kubetest/kube_prp_test/nextflow.config
+Sep-24 17:36:50.263 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/vikas/.nextflow/assets/vpeddu/kube_prp_test/nextflow.config
+Sep-24 17:36:50.264 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/vikas/Downloads/bootcamp/kubetest/kube_prp_test/nextflow.config
+Sep-24 17:36:50.264 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/vikas/.nextflow/assets/vpeddu/kube_prp_test/nextflow.config
+Sep-24 17:36:50.271 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Sep-24 17:36:50.345 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Sep-24 17:36:52.364 [main] DEBUG nextflow.k8s.K8sConfig - Kubernetes workDir=/tmp/vikas/work; projectDir=/tmp/projects; volumeClaims=[vikas-pod-test1]
+Sep-24 17:36:52.897 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Created K8s configMap with name: nf-config-29223636
+Sep-24 17:37:36.124 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Wait for pod termination name=wise-goldberg
