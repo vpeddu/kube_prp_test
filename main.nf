@@ -2,7 +2,7 @@
 process Testing {  
     //pod secret: "prp-s3-credentials/credentials", mountPath: "/root/.aws/credentials"
     container 'tbattaglia/kraken2'   
-    publishDir "s3://bmebootcamp/vpeddu/ahhhhhhhhhhhhhh/" mode: 'copy'
+    publishDir "s3://bmebootcamp/vpeddu/ahhhhhhhhhhhhhh/", mode: 'copy'
 
     // input:
     //     file krakendb from DATABASE_ch
