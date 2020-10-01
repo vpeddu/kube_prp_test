@@ -1,7 +1,7 @@
 
 process Testing {  
     //pod secret: "prp-s3-credentials/credentials", mountPath: "/root/.aws/credentials"
-    container 'tbattaglia/kraken2'   
+    container 'vpeddu/bmebootcampvikas'   
     publishDir "s3://bmebootcamp/vpeddu/ahhhhhhhhhhhhhh/", mode: 'copy'
 
     // input:
